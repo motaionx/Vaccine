@@ -6,6 +6,7 @@ import UIKit
   ///
   /// - Parameter notification: A standard InjectionIII notification
   private func viewDidLoadIfNeeded(_ notification: Notification) {
+    return
     guard Injection.isLoaded else { return }
     guard Injection.viewControllerWasInjected(self, in: notification) else { return }
     if !Injection.swizzleViewControllers {
